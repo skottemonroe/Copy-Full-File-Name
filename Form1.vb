@@ -5,11 +5,16 @@ Public Class Form1
 
 	Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 		Try
+			'declare some variables
 			Dim strInput
 			Dim strMode
 			Dim strFullFileNameAndPath
 			Dim strFileNameOnly
 
+			'Command() returns the input arguments. 
+			'Any time you see a $ after a function in VB, it means that the function returns a String.
+			'The version without the dollar sign returns a Variant.
+			'Isn't that interesting?  Anyway, that's what we're doing here.
 			strInput = Command$()
 
 			If Len(strInput) < 3 Then
